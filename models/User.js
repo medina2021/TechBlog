@@ -42,6 +42,11 @@ class User extends Model {
           newUserData.password = await bcrypt.hash(newUserData.password, 10);
           return newUserData;
         },
+
+        async beforeUpdate(updateUserData) {
+          updatedUserData.password = await bcrypt.hash(updateUserData.password, 10);
+          return updateUserData;
+        }
       },
       sequelize,
       timestamps: false,

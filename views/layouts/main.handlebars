@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <header>Tech Blog!</header>
-  {{!-- navbar --}}
-<nav>
-     <a href="/">Home</a>
-     <a href="/">Dashboard</a>
-     <a href="/">Login</a>
-     <a href="/">Logout</a>
-</nav>
-    {{{ body }}}
+    <div class="wrapper">
+    <header class="hero">
+    <div>
+    <nav class ="nav">
+        <a class="navlink" href="/">Home</a>
+        <a class="navlink" href="/dashboard">dashboard</a>
+        {{#if loggedIn}}
+        <a class="navlink" href="/" id="logout">logout</a>
+        {{else}}
+        <a class="navlink" href="/login">login</a>
+        {{/if}}
+        </nav>
+</div>
+<h1 class="app-title">Tech Blog</h1>
+</header>
+<main>
+    {{body}}
+</main>
+</div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+
 </body>
 </html>
