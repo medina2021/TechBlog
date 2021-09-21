@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
 });
 
 // Route to login after sign-up
-router.get('/post/:id', (req, res) =>{
+router.get('/login', (req, res) =>{
     if(req.session.loggedIn){
         res.redirect('/');
         return;
@@ -44,7 +44,7 @@ router.get('/post/:id', (req, res) =>{
     res.render('login');
 });
 
-router.get('/signup', (req,res)=>{
+router.get('/signup', (req,res)=> {
     res.render('signup');
 });
 

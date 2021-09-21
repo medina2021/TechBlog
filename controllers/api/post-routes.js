@@ -4,7 +4,7 @@ const sequelize = require('../../config/connection');
 const mustLogin = require('../../utils/mustlogin');
 
 // To get all posts
-router.get('/', async (req, res)=> {
+router.get('/', (req, res)=> {
     console.log('==================');
     Post.findAll({
         attributes: ['id',
@@ -113,7 +113,7 @@ router.put('/:id', mustLogin, (req,res) =>{
 router.delete('/:id', mustLogin, (req, res) =>{
     Post.destroy({
         where: {
-            id:req.params.id
+            id: req.params.id
         }
     }).then(dbPostData =>{
         if(!dbPostData) {

@@ -19,6 +19,7 @@ class User extends Model {
       username: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true
       },
       email: {
         type: DataTypes.STRING,
@@ -33,8 +34,8 @@ class User extends Model {
         allowNull: false,
         validate: {
           len: [6],
-        },
-      },
+        }
+      }
     },
     {
       hooks: {

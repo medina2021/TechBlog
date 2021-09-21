@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/stylesheets/mainStyle.css">
 </head>
 
 <body>
@@ -12,23 +15,26 @@
     <div>
     <nav class ="nav">
         <a class="navlink" href="/">Home</a>
-        <a class="navlink" href="/dashboard">dashboard</a>
+        <a class="navlink" href="/dashboard">Dashboard</a>
         {{#if loggedIn}}
-        <a class="navlink" href="/" id="logout">logout</a>
+        <a class="navlink" href="/" id="logout">Logout</a>
         {{else}}
-        <a class="navlink" href="/login">login</a>
+        <a class="navlink" href="/login">Login</a>
         {{/if}}
         </nav>
 </div>
-<h1 class="app-title">Tech Blog</h1>
+<h1 class="app-title"><i class="fab"></i>Tech Blog</h1>
 </header>
+
 <main>
-    {{body}}
+    {{{body}}}
 </main>
 </div>
+
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
 
 </body>
+
 </html>

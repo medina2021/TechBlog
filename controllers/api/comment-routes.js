@@ -44,7 +44,7 @@ router.post('/', mustLogin, (req, res) =>{
 // Update Comment
 router.put('/:id', mustLogin, (req, res) =>{
         Comment.update({
-            comment_text: req.body.comment_input,
+            comment_input: req.body.comment_input,
         },
         {
             where: {
