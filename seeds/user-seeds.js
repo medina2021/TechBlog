@@ -4,17 +4,17 @@ const userData = [
     {
         username: 'lola2020',
         email: 'stephc@gmail.com',
-        password: 'dreambig1'
+        password: 'dreamb'
     },
     {
         username: 'everm',
         email: 'everm@gmail.com',
-        password: 'emerald123'
+        password: 'emeral'
     },
     {
         username: 'mc25',
         email: 'michellecb@gmail.com',
-        password: 'michelle1'
+        password: 'michel'
     },
     {
         username: 'montythedog',
@@ -24,7 +24,7 @@ const userData = [
     {
         username: 'Missy',
         email: 'missy@gmail.com',
-        password: 'misses2'
+        password: 'misses'
     },
     {
         username: 'CamilaM',
